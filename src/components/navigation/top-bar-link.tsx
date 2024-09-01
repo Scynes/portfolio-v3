@@ -11,7 +11,7 @@ export const TopBarLink = ({ title, href }: { title: string, href: string }) => 
         <>
             <Link href={ href }>
                 <Box className={ 'py-3 px-7 relative' }>
-                    <Heading weight={ 'regular' } size={ '3' } className={ 'text-[#607B96]' }>
+                    <Heading weight={ 'regular' } size={ '3' } className={ `text-[#607B96] ${ PATH_NAME == href && 'text-white' }` }>
                         { title }
                     </Heading>
                     <Box className={ `transition-all absolute h-1 w-0 ${ PATH_NAME == href && '!w-full' } bg-[--orange-11] left-0 bottom-0` } />

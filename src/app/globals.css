@@ -6,6 +6,14 @@
   --font-fira-code: 'Fira Code', monospace;
 }
 
+.rt-CheckboxGroupItemCheckbox[data-state='checked']::before {
+  background-color: #486c92 !important;
+}
+
+.rt-BaseCheckboxIndicator[data-state='checked'] {
+  fill: white !important;
+}
+
 .radix-themes {
   --default-font-family: var(--font-fira-code) !important;
 }

@@ -11,7 +11,7 @@ export default function Page() {
                         { `Hello, my name is` }
                     </Text>
                     <Heading weight={ 'regular' } className={ 'transition-all text-[2.4rem] sm:text-6xl' }>Dustin Portell</Heading>
-                    <Heading size={{ initial: '4', sm: '6' }} weight={ 'regular' } color={ 'indigo' } className={ 'transition-all' }>
+                    <Heading size={{ initial: '4', sm: '7' }} weight={ 'regular' } color={ 'indigo' } className={ 'transition-all' }>
                         { `> Full Stack Developer` }
                     </Heading>
                     <Flex direction={ 'column' } mt={ '5' } gap={ '1' }>

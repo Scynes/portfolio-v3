@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-import { Box, Grid, Theme } from '@radix-ui/themes';
+import { Grid, Theme } from '@radix-ui/themes';
 import { TopBar } from '@/components/navigation/top-bar';
+import { Footer } from '@/components/footer/footer';
 
 import '@radix-ui/themes/styles.css';
 import "./globals.css";
-import { Footer } from '@/components/footer/footer';
 
 const inter = Fira_Code({ subsets: ["latin"], variable: '--font-fira-code', });
 

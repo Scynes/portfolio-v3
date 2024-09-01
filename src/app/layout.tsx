@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-import { Box, Theme } from '@radix-ui/themes';
+import { Box, Grid, Theme } from '@radix-ui/themes';
 import { TopBar } from '@/components/navigation/top-bar';
 
 import '@radix-ui/themes/styles.css';
 import "./globals.css";
+import { Footer } from '@/components/footer/footer';
 
 const inter = Fira_Code({ subsets: ["latin"], variable: '--font-fira-code', });
 
@@ -19,9 +20,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <body className={ inter.variable }>
                 <Theme appearance={ 'dark' } accentColor={ 'indigo' } className={ 'bg-[--sky-2]' }>
                     <TopBar />
-                    <Box className={ 'h-dvh overflow-y-scroll' }>
+                    <Grid rows={ '1fr auto' } className={ 'h-dvh overflow-y-scroll' }>
                         { children }
-                    </Box>
+                        <Footer/>
+                    </Grid>
                 </Theme>
             </body>
         </html>

@@ -18,7 +18,7 @@ export const TopBar = () => {
 
     return (
         <Flex className={ 'fixed border-b border-[#1E2D3D] w-full' } align={ 'center' }>
-            <Box className={ 'py-3 px-4 w-52' }>
+            <Box className={ 'py-3 px-4 w-72' }>
                 <Heading weight={ 'regular' } size={ '3' } className={ 'text-[#607B96] text-left' }>dustin-portell</Heading>
             </Box>
             <Separator orientation={ 'vertical' } size={ '2' } className={ 'bg-[#1E2D3D]' }/>

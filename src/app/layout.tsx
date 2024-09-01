@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Theme } from '@radix-ui/themes';
+import { TopBar } from '@/components/navigation/top-bar';
+
+import '@radix-ui/themes/styles.css';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +17,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en">
             <body className={ inter.className }>
-                { children }
+                <Theme appearance={ 'dark' } accentColor={ 'indigo' } className={ 'bg-[--sky-2]' }>
+                    <TopBar />
+                    { children }
+                </Theme>
             </body>
         </html>
     );

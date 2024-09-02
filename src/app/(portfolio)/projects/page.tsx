@@ -10,8 +10,8 @@ export default function Page () {
     const [ selectedValues, setSelectedValues ] = useState<string[]>([]);
 
     return (
-        <Grid columns={ '14rem 1fr' } className={ 'pt-[47px]' }>
-            <Flex className={ 'border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
+        <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'w-full h-full max-h-[calc(100dvh-43px)]' }>
+            <Flex className={ 'pt-[47px] border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
                 <Flex className={ 'h-9 border-b border-[#1E2D3D] px-4' } align={ 'center' } gap={ '2' }>
                     <GoTriangleDown size={ '1rem' } />
                     <Text>projects</Text>
@@ -22,12 +22,14 @@ export default function Page () {
                             <CheckboxGroup.Item key={ project.value } value={ project.value } className={ 'flex gap-6 w-full cursor-pointer' }>
                                 <Flex gap={ '2' } align={ 'center' } className={ 'select-none' }>
                                     <project.icon size={ '1.5rem' } color={ `${ selectedValues.includes(project.value) ? '#486c92' : '#2c445d' }` } />
-                                    <Text className={ 'text-white' }>{ project.value }</Text>
+                                    <Text className={ `${ selectedValues.includes(project.value) ? 'text-white' : 'text-[#486c92]' }` }>{ project.value }</Text>
                                 </Flex>
                             </CheckboxGroup.Item>
                         )) }
                     </CheckboxGroup.Root>
                 </Flex>
+            </Flex>
+            <Flex className='pt-[47px] overflow-y-scroll'>
             </Flex>
         </Grid>
     )

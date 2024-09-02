@@ -2,9 +2,9 @@ import { Flex, Text } from '@radix-ui/themes';
 import { useState } from 'react';
 import { GoTriangleDown } from 'react-icons/go';
 
-export const Dropdown = ({ title, children }: { title: string, children: React.ReactNode }) => {
+export const Dropdown = ({ title, expanded, children }: { title: string, expanded?: boolean, children: React.ReactNode }) => {
 
-    const [ menuExpanded, setMenuExpanded ] = useState<boolean>(false);
+    const [ menuExpanded, setMenuExpanded ] = useState<boolean>(expanded || false);
 
     return (
         <Flex className={ 'flex-1' } direction={ 'column' }>

@@ -12,7 +12,7 @@ export default function Page () {
     return (
         <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'w-full h-full max-h-[calc(100dvh-43px)]' }>
             <Flex className={ 'pt-[47px] border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
-                <Dropdown title={ 'projects filter' }>
+                <Dropdown title={ 'projects filter' } expanded>
                     <CheckboxGroup.Root value={ selectedValues } onValueChange={ setSelectedValues } size={ '3' } color={ 'gray' } highContrast className={ 'gap-4' }>
                         { PROJECT_TYPES.map( project => (
                             <CheckboxGroup.Item key={ project.value } value={ project.value } className={ 'flex gap-6 w-full cursor-pointer' }>

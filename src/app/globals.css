@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --font-fira-code: 'Fira Code', monospace;
+    --font-fira-code: 'Fira Code', monospace;
 }
 
 .rt-CheckboxGroupItemCheckbox[data-state='checked']::before {
-  background-color: #486c92 !important;
+    background-color: #486c92 !important;
+}
+
+.rt-CheckboxGroupItemCheckbox[data-state='unchecked']:hover::before{
+    background-color: #1b2937 !important;
 }
 
 .rt-BaseCheckboxIndicator[data-state='checked'] {
-  fill: white !important;
+    fill: white !important;
 }
 
 .radix-themes {
-  --default-font-family: var(--font-fira-code) !important;
+    --default-font-family: var(--font-fira-code) !important;
 }

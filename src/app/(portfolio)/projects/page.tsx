@@ -14,8 +14,8 @@ export default function Page () {
     const [ selectedValues, setSelectedValues ] = useState<string[]>([]);
 
     return (
-        <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'pt-[47px] w-full h-full max-h-[calc(100dvh-43px)]' }>
-            <Flex className={ 'border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
+        <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'relative pt-[47px] w-full h-full max-h-[calc(100dvh-43px)]' }>
+            <Flex className={ 'border-r border-[rgb(30,45,61)] bg-[--sky-2]' } direction={ 'column' }>
                 <Dropdown title={ 'technologies' } expanded>
                     <CheckboxGroup.Root value={ selectedValues } onValueChange={ setSelectedValues } size={ '3' } color={ 'gray' } highContrast className={ 'gap-4' }>
                         { Object.entries(TECHNOLOGIES).map(([key, Icon]) => (

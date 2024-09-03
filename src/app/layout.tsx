@@ -4,6 +4,8 @@ import { Grid, Theme } from '@radix-ui/themes';
 import { TopBar } from '@/components/navigation/top-bar';
 import { Footer } from '@/components/footer/footer';
 
+import Image from 'next/image';
+
 import '@radix-ui/themes/styles.css';
 import "./globals.css";
 
@@ -20,9 +22,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <body className={ inter.variable }>
                 <Theme appearance={ 'dark' } accentColor={ 'indigo' } className={ 'bg-[--sky-2]' }>
                     <TopBar />
-                    <Grid rows={ '1fr auto' } className={ 'h-dvh overflow-y-scroll' }>
+                    <Grid rows={ '1fr auto' } className={ 'relative h-dvh overflow-y-scroll' }>
                         { children }
                         <Footer/>
+                        <Image src={ '/background-blur.png' } alt={ 'hero' } fill className='object-cover sm:object-contain ml-0 sm:ml-40 md:ml-60 -z-50 animate-pulse'/>
+
                     </Grid>
                 </Theme>
             </body>

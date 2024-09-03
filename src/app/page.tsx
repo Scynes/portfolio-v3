@@ -1,6 +1,5 @@
 import { Container, Flex, Heading, Text, Button, Link as RadixLink } from '@radix-ui/themes';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Page() {
@@ -46,7 +45,6 @@ export default function Page() {
                         </Button>
                     </Flex>
                 </Flex>
-                <Image src={ '/background-blur.png' } alt={ 'hero' } fill className='object-cover sm:object-contain ml-0 sm:ml-40 md:ml-60 -z-50 animate-pulse'/>
             </Container>
         </Flex>
     );

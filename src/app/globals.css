@@ -13,7 +13,7 @@
 }
 
 .rt-TooltipArrow {
-    fill: #567fac !important;
+    fill: var(--orange-11) !important;
 }
 
 :root {

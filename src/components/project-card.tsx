@@ -19,7 +19,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                     <Card size={ '5' } className='relative w-full h-fit'>
                         <Inset clip={ 'padding-box' }>
                             <Flex className={ 'group cursor-pointer transition-all hover:bg-opacity-15 hover:backdrop-blur-sm h-full w-full absolute' } align={ 'center' } justify={ 'center' }>
-                                <FaEye size={ '3rem' } color={ '#607B96' } className={ 'transition-all opacity-0 group-active:scale-90 group-hover:opacity-100' } />
+                                <FaEye size={ '3rem' } className={ 'transition-all text-[--orange-11] opacity-0 group-active:scale-90 group-hover:opacity-100' } />
                             </Flex>
                             <Image src={ `/${ project.imgSrc }` } alt={ 'placeholder' } width={ 500 } height={ 180 } className={ '-z-20 rounded-xl' } />
                         </Inset>
@@ -32,7 +32,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                         </Dialog.Title>
                     </VisuallyHidden>
                     <Inset clip={ 'padding-box' } side={ 'top' } pb={ 'current' }>
-                        <Image src={ `/${ project.imgSrc }` } alt={ 'placeholder' } width={ 700 } height={ 400 } className={ 'rounded-t-xl' } />
+                        <Image src={ `/${ project.imgSrc }` } alt={ 'placeholder' } width={ 700 } height={ 400 } className={ 'rounded-t-xl border-b-[3px] border-[--orange-11]' } />
                     </Inset>
                     <Flex justify={ 'between' }>
                         <Heading size={ '5' } weight={ 'bold' } color={ 'indigo' }>
@@ -44,9 +44,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                                 const IconComponent = TECHNOLOGIES[technology];
 
                                 return (
-                                    <Tooltip key={ index } content={ technology } className={ 'bg-[#567fac]' }>
+                                    <Tooltip key={ index } content={ technology } className={ 'bg-[--orange-11]' }>
                                         <Box>
-                                            <IconComponent size={ '1.5rem' } color={ '#607B96' } />
+                                            <IconComponent size={ '1.5rem' } className={ 'text-[--orange-11]' } />
                                         </Box>
                                     </Tooltip>
                                 );
@@ -83,9 +83,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                     const IconComponent = TECHNOLOGIES[technology];
 
                     return (
-                        <Tooltip key={ index } content={ technology } className={ 'bg-[#567fac]' }>
+                        <Tooltip key={ index } content={ technology } className={ 'bg-[--orange-11]' }>
                             <Box>
-                                <IconComponent size={ '1.5rem' } color={ '#607B96' } />
+                                <IconComponent size={ '1.5rem' } className={ 'text-[--orange-11]' } />
                             </Box>
                         </Tooltip>
                     );

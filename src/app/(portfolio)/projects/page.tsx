@@ -4,8 +4,10 @@ import { Dropdown } from '@/components/dropdown';
 import { ProjectPreviewCard } from '@/components/project-preview-card';
 import { PROJECTS } from '@/constants/projects';
 import { TECHNOLOGIES } from '@/constants/technology';
-import { CheckboxGroup, Flex, Grid, Text } from '@radix-ui/themes';
+import { Technology } from '@/types/technology';
+import { Box, CheckboxGroup, Flex, Grid, Text } from '@radix-ui/themes';
 import { useState } from 'react';
+import { RxCross2 } from 'react-icons/rx';
 
 export default function Page () {
 
@@ -16,25 +18,34 @@ export default function Page () {
             <Flex className={ 'border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
                 <Dropdown title={ 'technologies' } expanded>
                     <CheckboxGroup.Root value={ selectedValues } onValueChange={ setSelectedValues } size={ '3' } color={ 'gray' } highContrast className={ 'gap-4' }>
-                    { Object.entries(TECHNOLOGIES).map(([key, Icon]) => (
-                        <CheckboxGroup.Item key={key} value={key} className={'flex gap-6 w-full cursor-pointer'}>
-                            <Flex gap={'2'} align={'center'} className={'select-none'}>
-                                <Icon size={'1.5rem'} color={`${selectedValues.includes(key) ? '#486c92' : '#2c445d'}`} />
-                                <Text className={`${selectedValues.includes(key) ? 'text-white' : 'text-[#486c92]'}`}>
-                                    {key}
-                                </Text>
-                            </Flex>
-                        </CheckboxGroup.Item>
-                    )) }
+                        { Object.entries(TECHNOLOGIES).map(([key, Icon]) => (
+                            <CheckboxGroup.Item key={ key } value={ key } className={'flex gap-6 w-full cursor-pointer'}>
+                                <Flex gap={'2'} align={'center'} className={'select-none'}>
+                                    <Icon size={'1.5rem'} color={`${selectedValues.includes(key) ? '#486c92' : '#2c445d'}`} />
+                                    <Text className={`${selectedValues.includes(key) ? 'text-white' : 'text-[#486c92]'}`}>
+                                        { key }
+                                    </Text>
+                                </Flex>
+                            </CheckboxGroup.Item>
+                        )) }
                     </CheckboxGroup.Root>
                 </Dropdown>
             </Flex>
             <Flex className={ 'overflow-y-scroll flex-1' } justify={ 'center' } direction={ 'column' }>
                 <Flex className={ 'min-h-9 border-b border-[#1E2D3D]' }>
-                    Currently Filtered
+                    <Flex className={ `px-4 border-r border-[#1E2D3D] h-full` } align={ 'center' } gap={ '4' }>
+                        <Text size={ '1' } className={ 'text-[#607B96]' }>
+                                <span className={ 'text-[--indigo-11]' }>let </span>
+                                <span className={ 'text-[--jade-11] font-medium' }>filters = </span>
+                                { selectedValues.length === 0 ? "'All'" : selectedValues.map(selected => `'${ selected }'`).join(", ") };
+                        </Text>
+                        <Box className={ 'rounded-full p-[2px] hover:bg-[#232d36] cursor-pointer' }>
+                            <RxCross2 size={ '0.75rem' } className={ '' } onClick={ () => setSelectedValues([]) } color={ '#607B96' } />
+                        </Box>
+                    </Flex>
                 </Flex>
                 <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '8' } px={ '4' } py={ '8' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
-                    { PROJECTS.filter(project => selectedValues.length === 0 || project.technologies.some(tech => selectedValues.includes(tech))).map((project, index) => (
+                    { PROJECTS.filter(project => selectedValues.length === 0 || selectedValues.every(tech => project.technologies.includes(tech as Technology))).map((project, index) => (
                         <ProjectPreviewCard key={index} project={project} />
                     )) }
                 </Flex>

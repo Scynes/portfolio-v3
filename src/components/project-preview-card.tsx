@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const ProjectPreviewCard = ({ project }: { project: Project }) => {
     return (
-        <Flex className='sm:min-w-[30rem]' direction={ 'column' } gap={ '2' }>
+        <Flex className={ 'sm:min-w-[30rem]' } direction={ 'column' } gap={ '2' }>
             <Flex gap={{ initial: '1', sm: '2' }} direction={{ initial: 'column', sm: 'row' }}>
                 <Heading size={ '3' } weight={ 'bold' } color={ 'indigo' }>
                     { project.title }

@@ -1,7 +1,7 @@
 'use client';
 
 import { Dropdown } from '@/components/dropdown';
-import { ProjectPreviewCard } from '@/components/project-preview-card';
+import { ProjectCard } from '@/components/project-card';
 import { PROJECTS } from '@/constants/projects';
 import { TECHNOLOGIES } from '@/constants/technology';
 import { Technology } from '@/types/technology';
@@ -35,9 +35,11 @@ export default function Page () {
                 <Flex className={ 'min-h-9 border-b border-[#1E2D3D]' }>
                     <Flex className={ `px-4 border-r border-[#1E2D3D] h-full` } align={ 'center' } gap={ '4' }>
                         <Text size={ '1' } className={ 'text-[#607B96]' }>
-                                <span className={ 'text-[--indigo-11]' }>let </span>
-                                <span className={ 'text-[--jade-11] font-medium' }>filters = </span>
-                                { selectedValues.length === 0 ? "'All'" : selectedValues.map(selected => `'${ selected }'`).join(", ") };
+                            <span className={ 'text-[--indigo-11]' }>let </span>
+                            <span className={ 'text-[--jade-11] font-medium' }>filters = </span>
+                            <span>[ </span>
+                            { selectedValues.length === 0 ? '"All"' : selectedValues.map(selected => `"${ selected }"`).join(", ") }
+                            <span> ];</span>
                         </Text>
                         <Box className={ 'rounded-full p-[2px] hover:bg-[#232d36] cursor-pointer' }>
                             <RxCross2 size={ '0.75rem' } className={ '' } onClick={ () => setSelectedValues([]) } color={ '#607B96' } />
@@ -46,7 +48,7 @@ export default function Page () {
                 </Flex>
                 <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '8' } px={ '4' } py={ '8' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
                     { PROJECTS.filter(project => selectedValues.length === 0 || selectedValues.every(tech => project.technologies.includes(tech as Technology))).map((project, index) => (
-                        <ProjectPreviewCard key={index} project={project} />
+                        <ProjectCard key={index} project={project} />
                     )) }
                 </Flex>
             </Flex>

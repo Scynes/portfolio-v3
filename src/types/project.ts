@@ -9,4 +9,10 @@ export interface Project {
     technologies: Technology[];
     // The short description of the project
     shortDescription: string;
+    // The long description of the project
+    longDescription: string;
+    // The GitHub link of the project
+    githubLink: string;
+    // The live link of the project
+    liveLink: string;
 }

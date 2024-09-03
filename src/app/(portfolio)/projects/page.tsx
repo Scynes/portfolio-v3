@@ -2,10 +2,9 @@
 
 import { Dropdown } from '@/components/dropdown';
 import { ProjectPreviewCard } from '@/components/project-preview-card';
-import { PROJECT_TYPES } from '@/constants/project-types';
 import { PROJECTS } from '@/constants/projects';
-import { Box, Card, CheckboxGroup, Container, Flex, Grid, Inset, Text } from '@radix-ui/themes';
-import Image from 'next/image';
+import { TECHNOLOGIES } from '@/constants/technology';
+import { CheckboxGroup, Flex, Grid, Text } from '@radix-ui/themes';
 import { useState } from 'react';
 
 export default function Page () {
@@ -17,16 +16,16 @@ export default function Page () {
             <Flex className={ 'border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
                 <Dropdown title={ 'projects filter' } expanded>
                     <CheckboxGroup.Root value={ selectedValues } onValueChange={ setSelectedValues } size={ '3' } color={ 'gray' } highContrast className={ 'gap-4' }>
-                        { PROJECT_TYPES.map( project => (
-                            <CheckboxGroup.Item key={ project.value } value={ project.value } className={ 'flex gap-6 w-full cursor-pointer' }>
-                                <Flex gap={ '2' } align={ 'center' } className={ 'select-none ' }>
-                                    <project.icon size={ '1.5rem' } color={ `${ selectedValues.includes(project.value) ? '#486c92' : '#2c445d' }` } />
-                                    <Text className={ `${ selectedValues.includes(project.value) ? 'text-white' : 'text-[#486c92]' }` }>
-                                        { project.value }
-                                    </Text>
-                                </Flex>
-                            </CheckboxGroup.Item>
-                        )) }
+                    {Object.entries(TECHNOLOGIES).map(([key, Icon]) => (
+                        <CheckboxGroup.Item key={key} value={key} className={'flex gap-6 w-full cursor-pointer'}>
+                            <Flex gap={'2'} align={'center'} className={'select-none'}>
+                                <Icon size={'1.5rem'} color={`${selectedValues.includes(key) ? '#486c92' : '#2c445d'}`} />
+                                <Text className={`${selectedValues.includes(key) ? 'text-white' : 'text-[#486c92]'}`}>
+                                    {key}
+                                </Text>
+                            </Flex>
+                        </CheckboxGroup.Item>
+                    ))}
                     </CheckboxGroup.Root>
                 </Dropdown>
             </Flex>

@@ -3,6 +3,7 @@
 import { Dropdown } from '@/components/dropdown';
 import { ProjectPreviewCard } from '@/components/project-preview-card';
 import { PROJECT_TYPES } from '@/constants/project-types';
+import { PROJECTS } from '@/constants/projects';
 import { Box, Card, CheckboxGroup, Container, Flex, Grid, Inset, Text } from '@radix-ui/themes';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -34,9 +35,9 @@ export default function Page () {
                     Currently Filtered
                 </Flex>
                 <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '8' } px={ '4' } py={ '8' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
-                    <ProjectPreviewCard imgSrc={ 'textlight.png' } />
-                    <ProjectPreviewCard imgSrc={ 'chatgpt-clone.png' } />
-                    <ProjectPreviewCard imgSrc={ 'chatgpt-clone.png' } />
+                    { PROJECTS.map((project, index) => (
+                        <ProjectPreviewCard key={ index } project={ project } />
+                    )) }
                 </Flex>
             </Flex>
         </Grid>

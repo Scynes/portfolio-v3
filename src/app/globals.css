@@ -12,6 +12,10 @@
     }
 }
 
+.rt-TooltipArrow {
+    fill: #567fac !important;
+}
+
 :root {
     --font-fira-code: 'Fira Code', monospace;
 }

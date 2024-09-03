@@ -32,14 +32,13 @@ export default function Page() {
                             </span>
                         </Text>
                     </Flex>
-                    <Flex gap={ '3' } className={ 'flex-col sm:flex-row' } mt={ '5' }>
-                        
-                        <Button asChild variant={ 'soft' } className={ 'transition-all sm:flex-1 cursor-pointer' } size={ '3' }>
+                    <Flex gap={ '3' } className={ 'flex-col sm:flex-row' } mt={ '5' }>                     
+                        <Button asChild variant={ 'soft' } className={ 'transition-all sm:flex-1 cursor-pointer' } size={ '4' }>
                             <Link href={ '/projects' }>
                                 View Projects
                             </Link>
                         </Button>
-                        <Button asChild variant={ 'outline' } className={ 'transition-all sm:flex-1 cursor-pointer' } size={ '3' }>
+                        <Button asChild variant={ 'outline' } className={ 'transition-all sm:flex-1 cursor-pointer' } size={ '4' }>
                             <Link href={ '/about' }>
                                 { "Let's Chat" }
                             </Link>

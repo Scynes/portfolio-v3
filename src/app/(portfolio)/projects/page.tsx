@@ -1,8 +1,10 @@
 'use client';
 
 import { Dropdown } from '@/components/dropdown';
+import { ProjectPreviewCard } from '@/components/project-preview-card';
 import { PROJECT_TYPES } from '@/constants/project-types';
-import { CheckboxGroup, Flex, Grid, Text } from '@radix-ui/themes';
+import { Box, Card, CheckboxGroup, Container, Flex, Grid, Inset, Text } from '@radix-ui/themes';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Page () {
@@ -10,8 +12,8 @@ export default function Page () {
     const [ selectedValues, setSelectedValues ] = useState<string[]>([]);
 
     return (
-        <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'w-full h-full max-h-[calc(100dvh-43px)]' }>
-            <Flex className={ 'pt-[47px] border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
+        <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'pt-[47px] w-full h-full max-h-[calc(100dvh-43px)]' }>
+            <Flex className={ 'border-r border-[rgb(30,45,61)]' } direction={ 'column' }>
                 <Dropdown title={ 'projects filter' } expanded>
                     <CheckboxGroup.Root value={ selectedValues } onValueChange={ setSelectedValues } size={ '3' } color={ 'gray' } highContrast className={ 'gap-4' }>
                         { PROJECT_TYPES.map( project => (
@@ -27,8 +29,15 @@ export default function Page () {
                     </CheckboxGroup.Root>
                 </Dropdown>
             </Flex>
-            <Flex className='sm:pt-[47px] overflow-y-scroll'>
-                hello
+            <Flex className={ 'overflow-y-scroll flex-1' } justify={ 'center' } direction={ 'column' }>
+                <Flex className={ 'min-h-9 border-b border-[#1E2D3D]' }>
+                    Currently Filtered
+                </Flex>
+                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '8' } px={ '4' } py={ '8' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
+                    <ProjectPreviewCard imgSrc={ 'textlight.png' } />
+                    <ProjectPreviewCard imgSrc={ 'chatgpt-clone.png' } />
+                    <ProjectPreviewCard imgSrc={ 'chatgpt-clone.png' } />
+                </Flex>
             </Flex>
         </Grid>
     )

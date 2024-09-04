@@ -1,3 +1,5 @@
+'use client';
+
 import { Flex, Text } from '@radix-ui/themes';
 import { useState } from 'react';
 import { GoTriangleDown } from 'react-icons/go';
@@ -7,7 +9,7 @@ export const Dropdown = ({ title, expanded, children }: { title: string, expande
     const [ menuExpanded, setMenuExpanded ] = useState<boolean>(expanded || false);
 
     return (
-        <Flex className={ 'flex-1' } direction={ 'column' }>
+        <Flex direction={ 'column' }>
             <Flex onClick={ () => setMenuExpanded(!menuExpanded) } className={ 'h-9 border-b border-[#1E2D3D] px-4 cursor-pointer hover:bg-[--color-panel]' } align={ 'center' } gap={ '2' }>
                 <GoTriangleDown size={ '1rem' } className={ `transition-all ${ !menuExpanded && 'rotate-180' }` } />
                 <Text className={ 'select-none' }>

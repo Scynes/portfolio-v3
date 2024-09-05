@@ -5,6 +5,7 @@ import { Box, Flex, Grid, Text } from '@radix-ui/themes';
 import { useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { PersonalInfo } from '@/components/personal-info';
+import { FaEnvelope, FaPhoneFlip } from 'react-icons/fa6';
 
 export default function Page () {
 
@@ -19,6 +20,18 @@ export default function Page () {
                         <PersonalInfo title={ 'resume' } onClick={ () => setSelectedInfo('resume') } colorClass={ 'text-[--amber-11]' } selected={ selectedInfo == 'resume' }/>
                     </Flex>
                 </Dropdown>
+                <Dropdown title={ 'contacts' }>
+                    <Flex direction={ 'column' } gap={ '2' }>
+                        <Flex gap={ '2' }>
+                            <FaEnvelope size={ '1rem' } color={ '#607B96' } />
+                            <Text size={ '1' } className={ 'text-[#607B96]' }>Email Address</Text>
+                        </Flex>
+                        <Flex gap={ '2' }>
+                            <FaPhoneFlip size={ '1rem' } color={ '#607B96' } />
+                            <Text size={ '1' } className={ 'text-[#607B96]' }>Phone Number</Text>
+                        </Flex>
+                    </Flex>
+                </Dropdown>
             </Flex>
             <Flex className={ 'overflow-y-scroll flex-1' } justify={ 'center' } direction={ 'column' }>
                 <Flex className={ 'min-h-9 border-b border-[#1E2D3D]' }>
@@ -31,7 +44,7 @@ export default function Page () {
                             </span>
                         </Text>
                         <Box className={ 'rounded-full p-[2px] hover:bg-[#232d36] cursor-pointer' }>
-                            <RxCross2 size={ '0.75rem' } className={ '' } onClick={ () => setSelectedInfo('bio') } color={ '#607B96' } />
+                            <RxCross2 size={ '0.75rem' } className={ '' } onClick={ () => setSelectedInfo('about-me') } color={ '#607B96' } />
                         </Box>
                     </Flex>
                 </Flex>

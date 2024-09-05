@@ -6,6 +6,14 @@ import { useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { PersonalInfo } from '@/components/personal-info';
 import { FaEnvelope, FaPhoneFlip } from 'react-icons/fa6';
+import { Document, Page as PDFPage, pdfjs } from 'react-pdf';
+
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+
+
+// Set the workerSrc for pdf.js
+pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url,).toString();
 
 export default function Page () {
 
@@ -17,6 +25,7 @@ export default function Page () {
                 <Dropdown title={ 'personal-info' } expanded>
                     <Flex direction={ 'column' } gap={ '4' }>
                         <PersonalInfo title={ 'about-me' } onClick={ () => setSelectedInfo('about-me') } colorClass={ 'text-[--tomato-11]' } selected={ selectedInfo == 'about-me' }/>
+                        <PersonalInfo title={ 'interests' } onClick={ () => setSelectedInfo('interests') } colorClass={ 'text-[--mint-11]' } selected={ selectedInfo == 'interests' }/>
                         <PersonalInfo title={ 'resume' } onClick={ () => setSelectedInfo('resume') } colorClass={ 'text-[--amber-11]' } selected={ selectedInfo == 'resume' }/>
                     </Flex>
                 </Dropdown>
@@ -49,7 +58,12 @@ export default function Page () {
                     </Flex>
                 </Flex>
                 <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '8' } px={ '4' } py={ '8' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
-                    primary content
+                <Document file={ '/files/resume.pdf' }>
+                    <Flex direction={ 'column' } gap={ '4' } className={ 'max-w-2xl' }>
+                        <PDFPage pageNumber={1} />
+                        <PDFPage pageNumber={2} />
+                    </Flex>
+                </Document>
                 </Flex>
             </Flex>
         </Grid>

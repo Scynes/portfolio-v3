@@ -14,19 +14,20 @@ export const TopBar = () => {
 
     const PATHS = [
         { title: '_home', href: '/' },
-        { title: '_about', href: '/about' },
         { title: '_projects', href: '/projects' },
+        { title: '_about', href: '/about' },
+        { title: '_contact', href: '/contact' },
     ];
 
     return (
         <Flex className={ `transition-all overflow-hidden fixed border-b border-[#1E2D3D] w-full ${ expanded && 'h-auto' } z-50 flex-col sm:flex-row bg-[--sky-2]` }>
-            <Flex className={ `${ expanded && 'border-b sm:border-b-0' } py-3 px-4 w-full sm:w-56 sm:border-r border-[#1E2D3D]` } justify={ 'between' }>
+            <Flex className={ `${ expanded && 'border-b sm:border-b-0' } py-3 px-4 w-full md:w-56 sm:border-r border-[#1E2D3D]` } justify={ 'between' }>
                 <Heading weight={ 'regular' } size={ '3' } className={ 'text-[#607B96] text-left' }>dustin-portell</Heading>
-                <Box onClick={ () => setExpanded(!expanded) } className={ 'sm:hidden' }>
+                <Box onClick={ () => setExpanded(!expanded) } className={ 'md:hidden' }>
                     { expanded ? <RxCross2 size={ '1.5rem' } className={ 'text-[#607B96] cursor-pointer' } /> : <RxHamburgerMenu size={ '1.5rem' } className={ 'text-[#607B96] cursor-pointer' } /> }
                 </Box>
             </Flex>
-            <Flex className={ 'hidden sm:flex' }>
+            <Flex className={ 'hidden md:flex' }>
                 { PATHS.map( path => <TopBarLink key={ path.href } title={ path.title } href={ path.href }/> ) }
             </Flex>
             <Flex direction={ 'column' } className={ `sm:hidden ${ !expanded && 'h-0' }` }>

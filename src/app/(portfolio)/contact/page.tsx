@@ -77,7 +77,7 @@ export default function Page () {
                     </Flex>
                     <Separator orientation={ 'vertical' } />
                     <Flex asChild className={ 'flex-1 !bg-[--color-panel]' } align={ 'center' } justify={ 'center' }>
-                        <SyntaxHighlighter language={ 'javascript' } style={ a11yDark } className={ 'h-fit w-full sm:h-full md:!p-8' } wrapLines wrapLongLines>
+                        <SyntaxHighlighter language={ 'javascript' } style={ a11yDark } className={ 'h-fit w-full sm:h-full md:!p-8' } wrapLongLines>
                             {`const name = "${ formData.name }"\n\nconst email = "${ formData.email }";\n\nconst message = "${ formData.message }";\n\nconst handleSubmit = async () => { \n    await submitForm(name, email, message);\n});`}
                         </SyntaxHighlighter>
                     </Flex>

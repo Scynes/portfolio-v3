@@ -6,18 +6,20 @@ import { useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { PersonalInfo } from '@/components/personal-info';
 import { FaEnvelope, FaPhoneFlip } from 'react-icons/fa6';
-import { Document, Page as PDFPage, pdfjs } from 'react-pdf';
 
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-
-
-// Set the workerSrc for pdf.js
-pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url,).toString();
+import { Resume } from '@/components/about/resume';
 
 export default function Page () {
 
     const [ selectedInfo, setSelectedInfo ] = useState<string>('about-me');
+
+    const ABOUT_RENDERS: Record<string, React.ReactNode> = {
+        'about-me': <Text size={ '1' } className={ 'text-[#607B96]' }>About Me</Text>,
+        'interests': <Text size={ '1' } className={ 'text-[#607B96]' }>Interests</Text>,
+        'resume': <Resume />
+    }
 
     return (
         <Grid columns={{ initial: '1fr', sm: '14rem 1fr' }} rows={{ initial: 'auto 1fr', sm: 'auto' }} className={ 'relative pt-[47px] w-full h-full max-h-[calc(100dvh-43px)]' }>
@@ -57,13 +59,8 @@ export default function Page () {
                         </Box>
                     </Flex>
                 </Flex>
-                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '8' } px={ '4' } py={ '8' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
-                <Document file={ '/files/resume.pdf' }>
-                    <Flex direction={ 'column' } gap={ '4' } className={ 'max-w-2xl' }>
-                        <PDFPage pageNumber={1} />
-                        <PDFPage pageNumber={2} />
-                    </Flex>
-                </Document>
+                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '4' } px={ '4' } py={{ initial: '4', sm: '8' }} className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
+                    { ABOUT_RENDERS[selectedInfo] }
                 </Flex>
             </Flex>
         </Grid>

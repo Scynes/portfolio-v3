@@ -29,6 +29,10 @@
     fill: var(--orange-11) !important;
 }
 
+.react-pdf__Page__textContent, .textLayer {
+    height: fit-content !important;
+}
+
 :root {
     --font-fira-code: 'Fira Code', monospace;
 }

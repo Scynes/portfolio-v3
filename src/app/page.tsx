@@ -1,3 +1,4 @@
+import { StaggeredText } from '@/components/staggered-text';
 import { Container, Flex, Heading, Text, Button, Link as RadixLink } from '@radix-ui/themes';
 
 import Link from 'next/link';
@@ -12,7 +13,7 @@ export default function Page() {
                     </Text>
                     <Heading weight={ 'regular' } className={ 'transition-all text-[2.4rem] sm:text-6xl' }>Dustin Portell</Heading>
                     <Heading size={{ initial: '4', sm: '7' }} weight={ 'regular' } color={ 'indigo' } className={ 'transition-all' }>
-                        { `> Full Stack Developer` }
+                        <StaggeredText text={ '> Full Stack Developer' } />
                     </Heading>
                     <Flex direction={ 'column' } mt={ '5' } gap={ '1' }>
                         <Text className={ 'text-[#607B96] transition-all' } size={{ initial: '1', sm: '3' }}>

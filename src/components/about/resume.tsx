@@ -10,8 +10,8 @@ export const Resume = () => {
     return (
         <Document file={ '/files/resume.pdf' }>
             <Flex direction={ 'column' } gap={ '4' } className={ 'max-w-2xl' }>
-                <Page pageNumber={1} />
-                <Page pageNumber={2} />
+                <Page pageNumber={1} className={ 'rounded-lg overflow-hidden' } />
+                <Page pageNumber={2} className={ 'rounded-lg overflow-hidden' } />
             </Flex>
         </Document>
     );

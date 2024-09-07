@@ -25,7 +25,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                         </Inset>
                     </Card>
                 </Dialog.Trigger>
-                <Dialog.Content size={ '1' } className={ '!outline-none' }>
+                <Dialog.Content size={ '1' } className={ '!outline-none bg-[--sky-2]' }>
                     <VisuallyHidden>
                         <Dialog.Title>
                             { project.title }

@@ -10,13 +10,14 @@ import { FaEnvelope, FaPhoneFlip } from 'react-icons/fa6';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { Resume } from '@/components/about/resume';
+import { AboutMe } from '@/components/about/about-me';
 
 export default function Page () {
 
     const [ selectedInfo, setSelectedInfo ] = useState<string>('about-me');
 
     const ABOUT_RENDERS: Record<string, React.ReactNode> = {
-        'about-me': <Text size={ '1' } className={ 'text-[#607B96]' }>About Me</Text>,
+        'about-me': <AboutMe />,
         'interests': <Text size={ '1' } className={ 'text-[#607B96]' }>Interests</Text>,
         'resume': <Resume />
     }
@@ -59,7 +60,7 @@ export default function Page () {
                         </Box>
                     </Flex>
                 </Flex>
-                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '4' } px={ '4' } py={{ initial: '4', sm: '8' }} className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
+                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '4' } p={ '4' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
                     { ABOUT_RENDERS[selectedInfo] }
                 </Flex>
             </Flex>

@@ -30,7 +30,7 @@ export const TopBar = () => {
             <Flex className={ 'hidden md:flex' }>
                 { PATHS.map( path => <TopBarLink key={ path.href } title={ path.title } href={ path.href }/> ) }
             </Flex>
-            <Flex direction={ 'column' } className={ `md:hidden ${ !expanded && 'h-0' }` }>
+            <Flex direction={ 'column' } className={ `z-50 md:hidden ${ !expanded && 'h-0' }` }>
                 { PATHS.map( path => 
                     <Box key={ path.href } className={ 'border-b border-[#1E2D3D]' }>
                         <TopBarLink title={ path.title } href={ path.href }/> 

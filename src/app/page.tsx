@@ -1,14 +1,13 @@
 import { StaggeredText } from '@/components/staggered-text';
 import { Container, Flex, Heading, Text, Button, Link as RadixLink } from '@radix-ui/themes';
 
-import Spline from '@splinetool/react-spline/next';
 import Link from 'next/link';
 
 export default function Page() {
 
     return (
         <Flex className={ 'h-full overflow-hidden relative' } align={ 'center' }>
-            <Container maxWidth={ '1200px' } className={ 'flex z-50 pointer-events-none' } px={{ initial: '6', sm: '9' }}>
+            <Container maxWidth={ '1200px' } className={ 'flex z-40 pointer-events-none' } px={{ initial: '6', sm: '9' }}>
                 <Flex gap={ '2' } direction={ 'column' } className={ 'w-fit' }>
                     <Text className={ 'entry-title' } size={{ initial: '1', sm: '3' }}>
                         <StaggeredText delay={ 0 }>
@@ -63,7 +62,6 @@ export default function Page() {
                     </Flex>
                 </Flex>
             </Container>
-            <Spline scene={ "/scene.splinecode" } className={ 'absolute ml-72 w-full' } />
         </Flex>
     );
 }

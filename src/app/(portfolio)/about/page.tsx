@@ -11,6 +11,7 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { Resume } from '@/components/about/resume';
 import { AboutMe } from '@/components/about/about-me';
+import { Interests } from '@/components/about/interests';
 
 export default function Page () {
 
@@ -18,7 +19,7 @@ export default function Page () {
 
     const ABOUT_RENDERS: Record<string, React.ReactNode> = {
         'about-me': <AboutMe />,
-        'interests': <Text size={ '1' } className={ 'text-[#607B96]' }>Interests</Text>,
+        'interests': <Interests />,
         'resume': <Resume />
     }
 

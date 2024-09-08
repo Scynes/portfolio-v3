@@ -1,29 +1,25 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
+import React, { ReactNode } from 'react';
 
-export const StaggeredText = ({ text }: { text: string }) => {
+export const StaggeredText = ({ children, delay }: { children: ReactNode | string, delay: number }) => {
+    
+    const AnimationProps = (index: number) => ({ 
+        initial: { opacity: 0, y: -30 }, 
+        animate: { opacity: 1, y: 0 }, 
+        transition: { delay: delay + index * 0.025 } 
+    });
 
-    const AnimationProps = {
-        initial: { opacity: 0, y: 0 },
-        animate: { opacity: 1, y: 20 },
-    };
+    const lettersArray = typeof children === 'string' ? children.split('') : React.Children.toArray(children);
 
     return (
-        <motion.span arial-hidden={ "true" } initial={ "initial" } animate={ "animate" } transition={{ staggerChildren: 0.05 }}>
-            { text.split(" ").map((word, index) => (
-                <React.Fragment key={index}>
-                    { word.split("").map((letter, index) => (
-                        <motion.span className={ "inline-block" } key={ index } variants={ AnimationProps }>
-                            {letter}
-                        </motion.span>
-                    )) }
-                    <motion.span className={ "inline-block" } key={ index } variants={ AnimationProps }>
-                        &nbsp;
-                    </motion.span>
-                </React.Fragment>
+        <span aria-hidden={ 'true' }>
+            { lettersArray.map((child, index) => (
+                <motion.span className={ 'inline-block' } key={ index } { ...AnimationProps(index) } style={{ whiteSpace: 'pre' }}>
+                    { typeof child === 'string' ? (child === ' ' ? '\u00A0' : child) : child }
+                </motion.span>
             )) }
-        </motion.span>
+        </span>
     );
 }

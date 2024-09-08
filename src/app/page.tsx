@@ -1,7 +1,6 @@
 import { StaggeredText } from '@/components/staggered-text';
 import { Container, Flex, Heading, Text, Button, Link as RadixLink } from '@radix-ui/themes';
 
-import Spline from '@splinetool/react-spline/next';
 import Link from 'next/link';
 
 export default function Page() {
@@ -63,7 +62,6 @@ export default function Page() {
                     </Flex>
                 </Flex>
             </Container>
-            <Spline scene={ "/scene.splinecode" } className={ 'absolute ml-72 w-full' } />
         </Flex>
     );
 }

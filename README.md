@@ -1,42 +1,40 @@
-# My Devleoper Portfolio V3
+# Developer Portfolio V3
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![Spline](https://img.shields.io/badge/Spline-111?style=for-the-badge&logo=spline&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Radix UI](https://img.shields.io/badge/Radix%20UI-4A4A4A?style=for-the-badge&logo=radix-ui&logoColor=white)
-![React PDF](https://img.shields.io/badge/React%20PDF-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Icons](https://img.shields.io/badge/React%20Icons-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Syntax Highlighter](https://img.shields.io/badge/React%20Syntax%20Highlighter-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+[Live Deployment](https://dustinjs.dev)
+
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Spline](https://img.shields.io/badge/Spline-111?style=for-the-badge&logo=spline&logoColor=white)](https://spline.design/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Radix UI](https://img.shields.io/badge/Radix%20UI-4A4A4A?style=for-the-badge&logo=radix-ui&logoColor=white)](https://www.radix-ui.com/)
+[![React PDF](https://img.shields.io/badge/React%20PDF-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react-pdf.org/)
+[![React Icons](https://img.shields.io/badge/React%20Icons-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react-icons.github.io/react-icons/)
+[![React Syntax Highlighter](https://img.shields.io/badge/React%20Syntax%20Highlighter-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react-syntax-highlighter.github.io/react-syntax-highlighter/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 ![Portfolio Screenshot](./public/portfolio-preview.png)
 
+## Overview
 
-Welcome to my reimagined developer portfolio! This project is a unique reflection of my skills, creativity, and the tech I'm passionate about. Built with cutting-edge tools and frameworks, it showcases who I am as a developer.
+This developer portfolio has been completely reimagined and built from the ground up to reflect my skills and creativity. It utilizes modern technologies and design principles to deliver a responsive, interactive, and scalable platform for showcasing my work.
 
-## 🌟 Features
+### Features
 
-- **Interactive 3D Design**: Thanks to Spline, there's a cool 3D experience that adds depth (pun intended) to the portfolio.
-- **Responsive and Fast**: Built with Next.js and styled with Tailwind CSS for performance across devices.
-- **Customizable and Extendable**: This portfolio can grow as my skills and projects do, and it’s easy to add new sections or improve the existing features.
-- **Smooth Animations**: Framer Motion ensures transitions are buttery smooth and visually pleasing.
-- **Resume Integration**: My resume is viewable and downloadable in PDF format directly from the site using React PDF.
+- **Interactive 3D Design**: Integrated 3D elements using Spline to create an engaging experience.
+- **Responsive Design**: Optimized for performance across all devices using Next.js and Tailwind CSS.
+- **Dynamic Animations**: Implemented smooth, visually appealing transitions using Framer Motion.
+- **Resume Integration**: A downloadable PDF of my resume is available directly from the portfolio using React PDF.
+- **Modular and Extendable**: Designed for easy updates and expansion to accommodate future projects and features.
 
----
+### Ongoing Improvements
 
-## 🚧 Ongoing Improvements
+- Further adjustments to the 3D elements, including potential removal of the robot.
+- Exploration of adding a blog section.
+- General refinements and optimizations for a more polished user experience.
 
-While the portfolio is mostly complete, there are still a few areas I’m refining:
-- 🔧 Potential removal or refinement of the 3D robot.
-- 💡 Considering adding a blog section, though still debating its necessity.
-- 🧹 General tweaks and optimizations.
+## Feedback & Contributions
 
+If you have any suggestions or would like to contribute, feel free to open an issue or submit a pull request.
 
-## 📝 Feedback & Contributions
-
-Feel free to open issues or pull requests if you have suggestions, or just drop me a message—I’m all ears! 👂
-
-
-## 📜 License
+## License
 
 This project is open-source under the [MIT License](LICENSE).

@@ -54,7 +54,14 @@ export const PROJECTS: Project[] = [
         longDescription: `The Advice Generator Application is a practice project focused on fetching API data and manipulating the DOM. \n\nIt offers a valuable learning experience for using grid layouts with small components, enhancing skills in API integration and UI design.`,
         githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
         liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/2/advice-generator-app/'
-    }
-    
-    
+    },
+    {
+        title: 'Plan Price',
+        imgSrc: 'pricing-component.png',
+        technologies: [ 'JavaScript', 'HTML', 'CSS' ],
+        shortDescription: '_a UX-friendly pricing component for plans.',
+        longDescription: `This is a demo component that's designed to display plan options in a user-friendly layout, typical of web hosting websites. \n\nIt’s a practical example of using grid and flexbox for dynamic and responsive design, offering insights into effective layout techniques.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/4/plan-pricing-component/'
+    } 
 ]

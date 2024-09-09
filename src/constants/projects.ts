@@ -18,5 +18,15 @@ export const PROJECTS: Project[] = [
         longDescription: `The ChatGPT Clone is a streamlined AI chat app that replicates the experience of interacting with OpenAI's ChatGPT. It allows users to engage in conversations with an AI model, providing insightful and responsive answers. \n\nPerfect for exploring AI-driven interactions, this clone offers a straightforward way to experience and test AI capabilities in real time.`,
         githubLink: 'https://github.com/Scynes/nextjs-chatgpt-clone',
         liveLink: 'https://nextjs-chatgpt-clone-five.vercel.app'
+    },
+    {
+        title: 'Blueprint Assessment',
+        imgSrc: 'blueprint-assessment.png',
+        technologies: [ 'React', 'Next.js', 'TypeScript', 'Tailwind', 'PostgreSQL' ],
+        shortDescription: '_a technical frontend assessment.',
+        longDescription: `A timed assessment focused on building a responsive, dynamic UI using modern web technologies. \n\nIt involved problem-solving, implementing design patterns, and ensuring cross-browser compatibility to meet real-world requirements.`,
+        githubLink: 'https://github.com/Scynes/blueprint-assessment',
+        liveLink: 'https://blueprint-assessment.vercel.app/'
     }
+    
 ]

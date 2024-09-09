@@ -25,7 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     <Grid rows={ '1fr auto' } className={ 'relative h-dvh overflow-y-scroll' }>
                         { children }
                         <Footer/>
-                        <Image src={ '/background-blur.png' } alt={ 'hero' } fill className='object-cover sm:object-contain ml-0 md:pl-40 lg:pl-60 -z-50 animate-pulse'/>
+                        <Image priority src={ '/background-blur.png' } alt={ 'hero' } fill className='object-cover sm:object-contain ml-0 md:pl-40 lg:pl-60 -z-50 animate-pulse'/>
                     </Grid>
                 </Theme>
             </body>

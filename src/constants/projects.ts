@@ -45,6 +45,16 @@ export const PROJECTS: Project[] = [
         longDescription: `Expense Tracker is a TypeScript and React application designed to help you manage and track your expenses efficiently. \n\nIt features expense input with validation, categorization for spending insights, and interactive UI with data visualizations. Built with Vite for a fast development experience, it serves as a practical showcase of TypeScript and React skills.`,
         githubLink: 'https://github.com/Scynes/expense-tracker',
         liveLink: 'https://expense-tracker-scynes.vercel.app'
+    },
+    {
+        title: 'Advicer',
+        imgSrc: 'advice-generator.png',
+        technologies: [ 'JavaScript', 'HTML', 'CSS' ],
+        shortDescription: '_a simple app that fetches advice from an API.',
+        longDescription: `The Advice Generator Application is a practice project focused on fetching API data and manipulating the DOM. \n\nIt offers a valuable learning experience for using grid layouts with small components, enhancing skills in API integration and UI design.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/2/advice-generator-app/'
     }
+    
     
 ]

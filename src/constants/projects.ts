@@ -27,6 +27,16 @@ export const PROJECTS: Project[] = [
         longDescription: `A timed assessment focused on building a responsive, dynamic UI using modern web technologies. \n\nIt involved problem-solving, implementing design patterns, and ensuring cross-browser compatibility to meet real-world requirements.`,
         githubLink: 'https://github.com/Scynes/blueprint-assessment',
         liveLink: 'https://blueprint-assessment.vercel.app/'
+    },
+    {
+        title: 'Brewtiful',
+        imgSrc: 'brewtiful.png',
+        technologies: [ 'React', 'TypeScript', 'CSS', 'HTML' ],
+        shortDescription: '_a demo website for a local coffee shop.',
+        longDescription: `Brewtiful is a demo website created for a local coffee shop. Built with React, it showcases the shop's menu, detailed product descriptions, and contact information.\n\nFeatures include browsing the menu, viewing details of each coffee item, and contacting the shop for inquiries or feedback. It’s a practical example of a modern, user-friendly interface for a local business.`,
+        githubLink: 'https://github.com/Scynes/showcase-coffee-shop-react',
+        liveLink: 'https://showcase-coffee-shop-react.vercel.app'
     }
+    
     
 ]

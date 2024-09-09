@@ -36,7 +36,25 @@ export const PROJECTS: Project[] = [
         longDescription: `This is a web app designed to help calculate how to split a large tip among a group of people. \n\nIt provides hands-on practice with DOM manipulation and event listeners, dynamically updating the display based on user input.`,
         githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
         liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/7/tip-splitter/'
-    },   
+    },
+    {
+        title: 'Landing Page',
+        imgSrc: 'company-landing.png',
+        technologies: [ 'HTML', 'CSS', 'JavaScript' ],
+        shortDescription: '_a full landing page for a mock company.',
+        longDescription: `This is a complete design for a mock company, featuring a friendly layout with clear navigation and item representation. \n\nIt was a fun project focused on simple design approaches, offering a great experience in creating a clean and engaging user interface.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/9/company-landing-page/'
+    },
+    {
+        title: 'Password Generator',
+        imgSrc: 'password-generator.png',
+        technologies: [ 'JavaScript', 'HTML', 'CSS' ],
+        shortDescription: '_a tool for generating passwords.',
+        longDescription: `I built a responsive application designed to create random passwords based on user input. \n\nIt’s a valuable exercise in solving DOM manipulation challenges with plain JavaScript, without relying on frameworks.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/11/password-generator/'
+    },    
     {
         title: 'Blueprint Assessment',
         imgSrc: 'blueprint-assessment.png',
@@ -55,6 +73,15 @@ export const PROJECTS: Project[] = [
         githubLink: 'https://github.com/Scynes/showcase-coffee-shop-react',
         liveLink: 'https://showcase-coffee-shop-react.vercel.app'
     }, 
+    {
+        title: 'Huddle Landing',
+        imgSrc: 'huddle-landing.png',
+        technologies: [ 'HTML', 'CSS', 'JavaScript' ],
+        shortDescription: '_a landing page for a huddle group.',
+        longDescription: `This is a simple landing page designed to promote a mock huddle group. \n\nThis project offered practical experience with layout design, focusing on creating an engaging and visually appealing landing page.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/13/huddle-landing-page/'
+    },    
     {
         title: 'Expense Tracker',
         imgSrc: 'expense-tracker.png',
@@ -81,5 +108,5 @@ export const PROJECTS: Project[] = [
         longDescription: `This is a demo component that's designed to display plan options in a user-friendly layout, typical of web hosting websites. \n\nIt’s a practical example of using grid and flexbox for dynamic and responsive design, offering insights into effective layout techniques.`,
         githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
         liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/4/plan-pricing-component/'
-    } 
+    },   
 ]

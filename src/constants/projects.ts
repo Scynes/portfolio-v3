@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Blueprint Assessment',
         imgSrc: 'blueprint-assessment.png',
-        technologies: [ 'React', 'Next.js', 'TypeScript', 'Tailwind', 'PostgreSQL' ],
+        technologies: [ 'React', 'Next.js', 'TypeScript', 'Tailwind', 'PostgreSQL', 'CSS' ],
         shortDescription: '_a technical frontend assessment.',
         longDescription: `A timed assessment focused on building a responsive, dynamic UI using modern web technologies. \n\nIt involved problem-solving, implementing design patterns, and ensuring cross-browser compatibility to meet real-world requirements.`,
         githubLink: 'https://github.com/Scynes/blueprint-assessment',
@@ -36,7 +36,15 @@ export const PROJECTS: Project[] = [
         longDescription: `Brewtiful is a demo website created for a local coffee shop. Built with React, it showcases the shop's menu, detailed product descriptions, and contact information.\n\nFeatures include browsing the menu, viewing details of each coffee item, and contacting the shop for inquiries or feedback. It’s a practical example of a modern, user-friendly interface for a local business.`,
         githubLink: 'https://github.com/Scynes/showcase-coffee-shop-react',
         liveLink: 'https://showcase-coffee-shop-react.vercel.app'
+    },
+    {
+        title: 'Expense Tracker',
+        imgSrc: 'expense-tracker.png',
+        technologies: [ 'TypeScript', 'React', 'HTML', 'CSS' ],
+        shortDescription: '_a simple todo app but for expenses.',
+        longDescription: `Expense Tracker is a TypeScript and React application designed to help you manage and track your expenses efficiently. \n\nIt features expense input with validation, categorization for spending insights, and interactive UI with data visualizations. Built with Vite for a fast development experience, it serves as a practical showcase of TypeScript and React skills.`,
+        githubLink: 'https://github.com/Scynes/expense-tracker',
+        liveLink: 'https://expense-tracker-scynes.vercel.app'
     }
-    
     
 ]

@@ -23,7 +23,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                             <Flex className={ 'group cursor-pointer transition-all hover:bg-opacity-15 hover:backdrop-blur-sm h-full w-full absolute' } align={ 'center' } justify={ 'center' }>
                                 <FaEye size={ '3rem' } className={ 'transition-all text-[--orange-11] opacity-0 group-active:scale-90 group-hover:opacity-100' } />
                             </Flex>
-                            <Image priority src={ `/${ project.imgSrc }` } alt={ 'placeholder' } width={ 500 } height={ 180 } className={ '-z-20 rounded-xl' } />
+                            <Image priority src={ `/${ project.imgSrc }` } alt={ 'placeholder' } width={ 500 } height={ 275 } className={ '-z-20 rounded-xl' } />
                         </Inset>
                     </Card>
                 </Dialog.Trigger>

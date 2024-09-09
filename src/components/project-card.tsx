@@ -12,7 +12,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                 <Heading size={ '3' } weight={ 'bold' } color={ 'indigo' }>
                     { project.title }
                 </Heading>
-                <Text size={{ initial: '1', sm: '2' }} className={ 'text-[#607B96]' }>// { project.shortDescription }</Text>
+                <Text size={{ initial: '1', sm: '2' }} className={ 'text-[#607B96]' }>
+                    { `// ${ project.shortDescription }` }
+                </Text>
             </Flex>
             <Dialog.Root>
                 <Dialog.Trigger>
@@ -53,7 +55,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                             }) }
                         </Flex>
                     </Flex>
-                    <Text size={ '1' } className={ 'text-[#607B96]' }>// { project.shortDescription }</Text>
+                    <Text size={ '1' } className={ 'text-[#607B96]' }>
+                        { `// ${ project.shortDescription }` }
+                    </Text>
                     <Container size={ '1' }>
                         <ScrollArea className={ 'max-h-48' }>
                             <Dialog.Description size={ '2' } className={ 'whitespace-pre-wrap pt-4' }>

@@ -9,7 +9,7 @@ export const Interests = () => {
 
             <Separator className={ 'my-4' } size={ '4' }/>
             <Text className={ 'text-sm sm:text-lg text-gray-300 leading-relaxed' }>
-                It's awesome you want to know my interests! I'm currently working on this section, so check back soon for more details.
+                It&#34;s awesome you want to know my interests! I&#34;m currently working on this section, so check back soon for more details.
             </Text>
         </Flex>
     );

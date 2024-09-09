@@ -42,7 +42,7 @@ export default function Page() {
                                 <span>= </span>
                                 <span className={'text-[--tomato-11] font-medium'}>
                                     <RadixLink href={'https://github.com/Scynes'} className={'text-[--tomato-11] font-medium'} color={'tomato'}>
-                                        "https://github.com/Scynes";
+                                    &#34;https://github.com/Scynes&#34;;
                                     </RadixLink>
                                 </span>
                             </StaggeredText>

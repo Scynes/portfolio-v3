@@ -2,6 +2,32 @@
 import { Flex } from '@radix-ui/themes';
 import { pdfjs, Document, Page } from 'react-pdf';
 
+// Adding Promise type safety declarations
+declare global {
+  interface PromiseConstructor {
+    withResolvers<T = unknown>(): {
+      promise: Promise<T>;
+      resolve: (value: T | PromiseLike<T>) => void;
+      reject: (reason?: any) => void;
+    };
+  }
+}
+
+// Polyfill for Promise.withResolvers
+if (typeof Promise.withResolvers === 'undefined') {
+  (Promise as any).withResolvers = function () {
+    let resolve: (value: unknown) => void;
+    let reject: (reason?: any) => void;
+    const promise = new Promise((res, rej) => {
+      resolve = res;
+      reject = rej;
+    });
+    return { promise, resolve: resolve!, reject: reject! };
+  };
+}
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
+
 export const Resume = () => {
 
     // Set the workerSrc for pdf.js

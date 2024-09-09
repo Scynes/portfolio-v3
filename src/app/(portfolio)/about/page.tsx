@@ -61,7 +61,7 @@ export default function Page () {
                         </Box>
                     </Flex>
                 </Flex>
-                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '4' } p={ '4' } className={ 'flex-1 h-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
+                <Flex wrap={ 'wrap'} justify={ 'center' } gap={ '4' } p={ '4' } className={ 'flex-1 h-full w-full overflow-y-scroll self-center max-w-7xl no-scrollbar' }>
                     { ABOUT_RENDERS[selectedInfo] }
                 </Flex>
             </Flex>

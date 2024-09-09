@@ -6,9 +6,6 @@ import { useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { PersonalInfo } from '@/components/personal-info';
 import { FaEnvelope, FaPhoneFlip } from 'react-icons/fa6';
-
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { Resume } from '@/components/about/resume';
 import { AboutMe } from '@/components/about/about-me';
 import { Interests } from '@/components/about/interests';

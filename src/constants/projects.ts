@@ -20,6 +20,24 @@ export const PROJECTS: Project[] = [
         liveLink: 'https://nextjs-chatgpt-clone-five.vercel.app'
     },
     {
+        title: 'News Blog',
+        imgSrc: 'news-blog.png',
+        technologies: [ 'JavaScript', 'HTML', 'CSS' ],
+        shortDescription: '_a demo landing page for a news website.',
+        longDescription: `This is a creative demo representation of a news website’s landing page, showcasing a blend of modern design elements. \n\nIt offers excellent practice in layout design using both flex and grid, highlighting innovative approaches to organizing content and enhancing user experience.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/6/news-landing-page/'
+    },
+    {
+        title: 'Tip Splitter',
+        imgSrc: 'tip-splitter.png',
+        technologies: [ 'JavaScript', 'HTML', 'CSS' ],
+        shortDescription: '_an app for splitting tips among a group.',
+        longDescription: `This is a web app designed to help calculate how to split a large tip among a group of people. \n\nIt provides hands-on practice with DOM manipulation and event listeners, dynamically updating the display based on user input.`,
+        githubLink: 'https://github.com/Scynes/100-days-of-frontend-code?tab=readme-ov-file',
+        liveLink: 'https://scynes.github.io/100-days-of-frontend-code/days/7/tip-splitter/'
+    },   
+    {
         title: 'Blueprint Assessment',
         imgSrc: 'blueprint-assessment.png',
         technologies: [ 'React', 'Next.js', 'TypeScript', 'Tailwind', 'PostgreSQL', 'CSS' ],
@@ -36,7 +54,7 @@ export const PROJECTS: Project[] = [
         longDescription: `Brewtiful is a demo website created for a local coffee shop. Built with React, it showcases the shop's menu, detailed product descriptions, and contact information.\n\nFeatures include browsing the menu, viewing details of each coffee item, and contacting the shop for inquiries or feedback. It’s a practical example of a modern, user-friendly interface for a local business.`,
         githubLink: 'https://github.com/Scynes/showcase-coffee-shop-react',
         liveLink: 'https://showcase-coffee-shop-react.vercel.app'
-    },
+    }, 
     {
         title: 'Expense Tracker',
         imgSrc: 'expense-tracker.png',

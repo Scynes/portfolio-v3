@@ -19,6 +19,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
+            <meta property="og:image" content="https://dustinjs.dev/portfolio-og.png" />
+            <meta property="og:image:type" content="image/png" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content="A preview of Dustin Portell's portfolio." />
             <body className={ inter.variable }>
                 <Theme appearance={ 'dark' } accentColor={ 'indigo' } className={ 'bg-[--sky-2]' }>
                     <TopBar />

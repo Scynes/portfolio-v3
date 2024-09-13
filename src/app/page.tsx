@@ -59,7 +59,7 @@ export default function Page() {
                                 </Link>
                             </Button>
                             <Button asChild variant={ 'outline' } className={ 'transition-all sm:flex-1 cursor-pointer' } size={ '4' }>
-                                <Link href={ '/about' }>
+                                <Link href={ '/contact' }>
                                     { "Let's Chat" }
                                 </Link>
                             </Button>

@@ -13,13 +13,13 @@ export const Footer = () => {
                 </Box>
                 <Separator orientation={ 'vertical' } />
                 <Flex asChild align={ 'center' } justify={ 'center' } className={ 'transition-all w-11 hover:bg-[--color-panel] active:bg-[--accent-2]' }>
-                    <Link href={ '/' }>
+                    <Link href={ 'https://linkedin.com/in/dustinjs' }>
                         <FaLinkedinIn className={ 'text-[#607B96]' } size={ '1.25rem' } />
                     </Link>
                 </Flex>
                 <Separator orientation={ 'vertical' } />
                 <Flex asChild align={ 'center' } justify={ 'center' } className={ 'transition-all w-11 hover:bg-[--color-panel] active:bg-[--accent-2]' }>
-                    <Link href={ '/' }>
+                    <Link href={ 'https://github.com/Scynes' }>
                         <FaGithub className={ 'text-[#607B96]' } size={ '1.25rem' } />
                     </Link>
                 </Flex>

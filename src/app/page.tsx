@@ -16,9 +16,9 @@ export default function Page() {
             <Container maxWidth={ '1400px' } className={ 'z-40' } px={{ initial: '6', sm: '9' }}>
                 <Flex align={ 'center' } justify={ 'between' } className={ 'flex-col lg:flex-row sm:mt-52 gap-8 lg:mt-0' }>
                     <Flex gap={ '2' } direction={ 'column' } className={ 'w-fit' }>
-                        <WordPullUp className={ 'text-xs text-left' } words={ 'Hello! My name is' } />
-                        <GradualSpacing className='tracking-[-0.1em] transition-all text-left text-[1.9rem] sm:text-6xl' text={ 'Dustin Portell' } />
-                        <WordPullUp className={ 'text-lg sm:text-3xl text-[--indigo-11] font-medium text-left' } words={ '> Full Stack Developer' } />
+                        <GradualSpacing className={ 'tracking-[-0.1em] text-xs' } text={ 'Hello! My name is' } />
+                        <GradualSpacing className='tracking-[-0.1em] text-[1.9rem] sm:text-6xl' text={ 'Dustin Portell' } />
+                        <GradualSpacing className={ 'tracking-[-0.1em] text-lg sm:text-3xl text-[--indigo-11] font-medium' } text={ '> Full Stack Developer' } />
                         <Flex direction={'column'} mt={'5'} gap={'1'}>
                             <BoxReveal>
                                 <Text className={'text-[#607B96] transition-all'} size={{ initial: '1', sm: '3' }}>
